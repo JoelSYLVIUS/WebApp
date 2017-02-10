@@ -48,7 +48,7 @@
     <h1>Attraction</h1>
 
 <a href="#">
-  <div class="block">
+  <div class="block swiperight">
     <div class="image">
       <img src="img/swip.jpg" alt="test" width="100%">
     </div>
@@ -65,10 +65,17 @@
   </div>
 </a>
 
-  <script type="text/javascript" src="cordova.js"></script>
+  <script type="text/javascript" src="js/cordova.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
   <script type="text/javascript">
       app.initialize();
+  </script>
+  <script type="text/javascript">
+  document.addEventListener('swiperight',
+      function() {
+          console.log('Got that Swipe Right');
+      }
+  );
   </script>
 </body>
 
