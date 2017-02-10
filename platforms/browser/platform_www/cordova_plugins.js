@@ -602,6 +602,14 @@ module.exports = [
             "navigator.notification",
             "navigator"
         ]
+    },
+    {
+        "file": "plugins/com.rossgerbasi.cordova.glass.core/www/cordova-glass-core.js",
+        "id": "com.rossgerbasi.cordova.glass.core.GlassCore",
+        "pluginId": "com.rossgerbasi.cordova.glass.core",
+        "clobbers": [
+            "com.rossgerbasi.cordova.glass.core"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -627,7 +635,9 @@ module.exports.metadata =
     "cordova-plugin-splashscreen": "3.2.2",
     "cordova-plugin-statusbar": "2.1.3",
     "cordova-plugin-vibration": "2.1.3",
-    "cordova-plugin-whitelist": "1.2.2"
+    "cordova-plugin-whitelist": "1.2.2",
+    "com.rossgerbasi.cordova.glass.gesture": "0.0.1",
+    "com.rossgerbasi.cordova.glass.core": "0.0.2"
 }
 // BOTTOM OF METADATA
 });
