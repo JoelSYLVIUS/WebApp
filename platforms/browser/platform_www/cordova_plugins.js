@@ -610,6 +610,14 @@ module.exports = [
         "clobbers": [
             "com.rossgerbasi.cordova.glass.core"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-googlemaps/www/googlemaps-cdv-plugin.js",
+        "id": "cordova-plugin-googlemaps.cordova-plugin-googlemaps",
+        "pluginId": "cordova-plugin-googlemaps",
+        "clobbers": [
+            "cordova-plugin-googlemaps"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -637,7 +645,8 @@ module.exports.metadata =
     "cordova-plugin-vibration": "2.1.3",
     "cordova-plugin-whitelist": "1.2.2",
     "com.rossgerbasi.cordova.glass.gesture": "0.0.1",
-    "com.rossgerbasi.cordova.glass.core": "0.0.2"
+    "com.rossgerbasi.cordova.glass.core": "0.0.2",
+    "cordova-plugin-googlemaps": "1.4.0"
 }
 // BOTTOM OF METADATA
 });

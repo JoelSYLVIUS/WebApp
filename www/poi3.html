@@ -48,7 +48,7 @@
     <h1>Attraction</h1>
 
 <a href="#">
-  <div class="block">
+  <div class="block" id="swipe">
     <div class="image">
       <img src="img/swip4.jpg" alt="test" width="100%">
     </div>
@@ -58,7 +58,7 @@
     </div>
   </div>
 </a>
- 
+
 <a href="poi2.html">
   <div class="retourarriere">
     <p>Précédent</p>
@@ -70,6 +70,25 @@
   <script type="text/javascript">
       app.initialize();
   </script>
+  <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+  <script type="text/javascript">
+  var myElement = document.getElementById('swipe');
+
+// create a simple instance
+// by default, it only adds horizontal recognizers
+var mc = new Hammer(myElement);
+
+// let the pan gesture support all directions.
+// this will block the vertical scrolling on a touch-device while on the element
+//mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+mc.get('swipe').set({ direction: Hammer.DIRECTION_RIGHT});
+
+// listen to events...
+mc.on(" swipe", function(ev) {
+    myElement.textContent = ev.type +" gesture detected.";
+    document.location.href="carte1.html"
+});
+</script>
 </body>
 
 </html>

@@ -47,9 +47,9 @@
 
     <h1>Attraction</h1>
 
-<a href="poi1.html">
-  <div class="block swiperight">
-    <div class="image">
+<a href="#">
+  <div class="block swipe" id="swipe">
+    <div class="image demo-box">
       <img src="img/swip.jpg" alt="test" width="100%">
     </div>
     <div class="text">
@@ -70,14 +70,32 @@
   <script type="text/javascript">
       app.initialize();
   </script>
+  <!--<script type="text/javascript">
+  $("#swipe").swipe({
+  swipe:function(event, "right") {
+    $(this).text("You swiped " + "right" );
+  }
+});
+  </script>-->
+  <script src="https://hammerjs.github.io/dist/hammer.js"></script>
   <script type="text/javascript">
-  document.addEventListener('swiperight',
-      function() {
-          console.log('Got that Swipe Right');
-          document.location.href="poi1.html";
-      }
-  );
-  </script>
+  var myElement = document.getElementById('swipe');
+
+// create a simple instance
+// by default, it only adds horizontal recognizers
+var mc = new Hammer(myElement);
+
+// let the pan gesture support all directions.
+// this will block the vertical scrolling on a touch-device while on the element
+//mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+mc.get('swipe').set({ direction: Hammer.DIRECTION_HORIZONTAL});
+
+// listen to events...
+mc.on(" swipe", function(ev) {
+    myElement.textContent = ev.type +" gesture detected.";
+    document.location.href="poi1.html"
+});
+</script>
 </body>
 
 </html>
