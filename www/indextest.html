@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Turn plain webform into a powerful wizard with jQuery</title>
+    <style type="text/css">
+        body { font-family:Lucida Sans, Arial, Helvetica, Sans-Serif; font-size:13px; margin:20px;}
+        #main { width:98%; margin: 0px auto; border:solid 1px #b2b3b5; -moz-border-radius:10px; background-color:#f6f6f6;}
+        #header { text-align:center; border-bottom:solid 1px #b2b3b5; margin: 0 0 20px 0; }
+        fieldset { border:none; width:97%;}
+        legend { font-size:18px; margin:0px; padding:10px 0px; color:#b0232a; font-weight:bold;}
+        label { display:block; margin:15px 0 5px;}
+        input[type=text], input[type=password] { width:300px; padding:5px; border:solid 1px #000;}
+        .prev, .next { background-color:#b0232a; padding:5px 10px; color:#fff; text-decoration:none;}
+        .prev:hover, .next:hover { background-color:#000; text-decoration:none;}
+        .prev { float:left;}
+        .next { float:right;}
+        #steps { list-style:none; width:100%; overflow:hidden; margin:0px; padding:0px;}
+        #steps li {font-size:24px; float:left; padding:10px; color:#b0b1b3;}
+        #steps li span {font-size:11px; display:block;}
+        #steps li.current { color:#000;}
+        #makeWizard { background-color:#b0232a; color:#fff; padding:5px 10px; text-decoration:none; font-size:18px;}
+        #makeWizard:hover { background-color:#000;}
+        .text{text-align: center;width: 92%;margin:auto;}
+        h2{margin-bottom: 20px;font-size: 60px;}
+        p{margin-bottom: 50px;font-size: 40px;}
+    </style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+    <script type="text/javascript" src="formToWizard.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#SignupForm").formToWizard({ submitButton: 'SaveAccount' })
+        });
+    </script>
+</head>
+<body>
+    <div id="main">
+
+        <form id="SignupForm" action="" method="post">
+        <fieldset>
+
+            <div class="image">
+              <img src="img/swip.jpg" alt="test" width="100%">
+            </div>
+            <div class="text">
+              <h2>Le Manoir Hanté</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+
+        </fieldset>
+        <fieldset>
+
+            <div class="image">
+              <img src="img/swip2.jpg" alt="test" width="100%">
+            </div>
+            <div class="text">
+              <h2>Le Manoir Hanté</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+        </fieldset>
+        <fieldset>
+          <div class="image">
+            <img src="img/swip3.jpg" alt="test" width="100%">
+          </div>
+          <div class="text">
+            <h2>Le Manoir Hanté</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </fieldset>
+        <fieldset>
+          <div class="image">
+            <img src="img/swip4.jpg" alt="test" width="100%">
+          </div>
+          <div class="text">
+            <h2>Le Manoir Hanté</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+        </fieldset>
+        <fieldset>
+          <p>
+              <input id="SaveAccount" type="button" value="Validez vos choix" />
+          </p>
+        </fieldset>
+
+        </form>
+    </div>
+</body>
+</html>
